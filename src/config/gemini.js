@@ -2,7 +2,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Access the API key from the environment variable
-const apiKey = process.env.VITE_REACT_APP_GOOGLE_API_KEY;
+const apiKey = import.meta.env.VITE_APP_GOOGLE_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
